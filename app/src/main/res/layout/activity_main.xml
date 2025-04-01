@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Первый layout: Экран ввода числа -->
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/numberInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Введите число"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Проверить"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+    <!-- Второй layout: Экран победы -->
+    <LinearLayout
+        android:id="@+id/victoryLayout"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!-- Текст победы -->
+        <TextView
+            android:id="@+id/victoryMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Поздравляем! Вы победили!" />
+
+        <!-- Загаданное число -->
+        <TextView
+            android:id="@+id/guessedNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Загаданное число: " />
+
+        <!-- Количество попыток -->
+        <TextView
+            android:id="@+id/attemptsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Количество попыток: " />
+
+        <!-- Кнопка для перезапуска игры -->
+        <Button
+            android:id="@+id/restartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Попробовать ещё раз"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+</LinearLayout>
